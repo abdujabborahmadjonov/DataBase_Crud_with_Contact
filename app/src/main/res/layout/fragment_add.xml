@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#44ABFD"
+    tools:context=".fragments.AddFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/namelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        app:helperText="Required*"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:startIconDrawable="@drawable/ic_person"
+        android:layout_marginEnd="10dp"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_Edt"
+            android:background="#259FFF"
+
+            android:layout_width="match_parent"
+            android:maxLength="21"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/releway"
+            android:hint="name" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/number_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Number"
+        app:prefixText="+998 "
+        app:startIconDrawable="@drawable/ic_baseline_call_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:errorIconDrawable="@drawable/ic_baseline_error_24"
+        app:errorEnabled="true"
+        app:prefixTextColor="@color/purple_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namelayout">
+
+        <com.vicmikhailau.maskededittext.MaskedEditText
+            android:id="@+id/number_Edt"
+            android:layout_width="match_parent"
+            android:maxLength="21"
+            app:mask="## ### ## ##"
+            android:background="#259FFF"
+            android:layout_height="wrap_content"
+             />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#259FFF"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/releway"
+        android:text="Save"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintCircleRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
